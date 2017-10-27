@@ -1,0 +1,22 @@
+<div class="container">
+  <div>
+    <table>
+      <tr>
+        <th>NOME</th>
+        <th>SOBRENOME</th>
+        <th>AMIGOS DESDE</th>
+      </tr>
+      {{#each model as |friend|}}
+        {{#link-to 'friends.friend.edit' friend tagName='tr' class="cursor"}}
+          <td>{{friend.name}}</td>
+          <td>{{friend.lastname}}</td>
+          <td>{{friend.friendsSince}}</td>
+          {{!--{{moment-format friend.friendsSince 'LLL' 'MM-DD-YYYY'}}--}}
+        {{/link-to}}
+      {{/each}}
+    </table>
+  </div>
+  <div >
+    {{outlet}}
+  </div>
+</div>

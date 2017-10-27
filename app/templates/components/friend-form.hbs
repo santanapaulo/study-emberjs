@@ -1,0 +1,10 @@
+<div>
+  Name: {{one-way-input value=model.name update=(action (mut model.name))}}
+  {{display-errors errors=errors.model.name showErrors=showErrors }}
+  <br>
+  lastName: {{one-way-input value=model.lastname update=(action (mut model.lastname))}}
+  <br>
+  Friends Since: {{one-way-date value=model.friendsSince update=(action (mut model.friendsSince))}}
+  <br>
+  <button {{action 'save'}}>Save</button>
+</div>
